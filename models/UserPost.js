@@ -18,11 +18,19 @@ const PostSchema = mongoose.Schema({
     },
     like : {
         type : Array,
-        default : []
+        default : [0]
     },
     comment : {
         type : Array,
-        default : []
+        default : [0]
+    },
+    createdAt:{
+        type:Date,
+        default:Date.now()
+    },
+    updatedAt:{
+        type:Date,
+        default:Date.now()
     },
  
 }, {timestemp : true});

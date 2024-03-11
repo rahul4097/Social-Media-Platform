@@ -28,14 +28,21 @@ const userSchema = mongoose.Schema({
     country : {
         type : String,
         required : true
+    }, createdAt:{
+        type:Date,
+        default:Date.now()
+    },
+    updatedAt:{
+        type:Date,
+        default:Date.now()
     },
     follower :{
         type : Array,
-        default : []
+        default : [0]
     },
     following : {
         type : Array,
-        default : []
+        default : [0]
     }
 }, {timestemp : true});
 
