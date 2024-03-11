@@ -1,0 +1,95 @@
+<div class="d-flex justify-content-between flex-md nowrap align-items-center pt-3 pb-2 mb-2 border-bottom">
+    <h1 class="h2"><%= user.fname %></h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <div class="btn-group me-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary ">Share</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary ">Export</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="col py-3">
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/profile">Dashboard</a></li>
+                    <li class="breadcrumb-item active"><%= user.fname %></li>
+                </ol>
+            </nav>
+        </div>
+
+        <div class="col text-end fw-lighter">
+            <b>Last Updated <%= new Date(user.updatedAt).toUTCString() %></b><br>
+            <b>UserId:</b> <%= user._id %>
+        </div>
+    </div>
+</div>
+
+<ul class="list-group">
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col" style="max-width:140px ;"><b>First Name:</b></div>
+               <div class="col">
+                    <%= user.fname %>
+               </div> 
+        </div>
+    </li>
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col" style="max-width:140px ;"><b>Last Name:</b></div>
+               <div class="col">
+                    <%= user.lname %>
+               </div> 
+        </div>
+    </li>
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col" style="max-width:140px ;"><b>User Name:</b></div>
+               <div class="col">
+                    <%= user.userName %>
+               </div> 
+        </div>
+    </li>
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col" style="max-width:140px ;"><b>About:</b></div>
+               <div class="col">
+                    <%= user.about %>
+               </div> 
+        </div>
+    </li>
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col" style="max-width:140px ;"><b>Intrest:</b></div>
+               <div class="col">
+                    <%= user.Intrest %>
+               </div> 
+        </div>
+    </li>
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col" style="max-width:140px ;"><b>Country:</b></div>
+               <div class="col">
+                    <%= user.country %>
+               </div> 
+        </div>
+    </li>
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col" style="max-width:140px ;"><b>Date Created:</b></div>
+               <div class="col">
+                    <%= new Date(user.createdAt).toUTCString() %> 
+               </div> 
+        </div>
+    </li>
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col" style="max-width:140px ;"><b>Date Modified:</b></div>
+               <div class="col">
+                    <%= new Date(user.updatedAt).toUTCString() %> 
+               </div> 
+        </div>
+    </li>
+</ul>
