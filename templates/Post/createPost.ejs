@@ -1,0 +1,46 @@
+<div class="col py-3">
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/post">Dashboard</a></li>
+                    <li class="breadcrumb-item active"><%= myPost.userName %></li>
+                </ol>
+            </nav>
+        </div>
+  
+        <div class="col text-end fw-lighter">
+            <b>Last Updated <%= //new Date(user.updatedAt).toUTCString() %></b><br>
+            <b>UserId:</b> <%= myPost._id %>
+        </div>
+    </div>
+  </div>
+  
+  
+  <form class="row g-3" action="/post/createPost" method="POST">
+    <div class="col-md-6">
+     <label for="inputEmail4" class="form-label">User Name</label>
+     <input type="text" class="form-control" id="inputEmail4" name="userName">
+   </div>
+    <div class="col-md-6">
+     <label for="inputEmail4" class="form-label">Content</label>
+     <input type="text" class="form-control" id="inputEmail4" name="content">
+   </div>
+   <div class="col-md-6">
+     <label for="inputEmail4" class="form-label">Description</label>
+     <input type="text" class="form-control" id="inputEmail4" name="description">
+   </div>
+
+   <div class="col-12">
+     <div class="form-check">
+       <input class="form-check-input" type="checkbox" id="gridCheck">
+       <label class="form-check-label" for="gridCheck">
+         Check me out
+       </label>
+     </div>
+   </div>
+   <div class="col-12">
+     <button type="submit" class="btn btn-primary">Submit Your Post</button>
+   </div>
+  </form>
+  

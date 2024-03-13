@@ -1,0 +1,51 @@
+<div class="d-flex justify-content-between flex-md nowrap align-items-center pt-3 pb-2 mb-2 border-bottom">
+    <h1 class="h2">Search</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <div class="btn-group me-2">
+            <a href="/signup" class="btn btn-sm btn-outline-secondary">+ New Member</a>
+        </div>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <% if (searchUser != "") { %>
+
+        <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">User Name</th>
+                    <th scope="col">Tel</th>
+                    <th scope="col">Email Name</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+        
+        <tbody>
+            <% searchUser.forEach(element => { %>
+                <tr class="align-middle">
+                    <td><%= element.name %></td>
+                    <td><%= element.userName %></td>
+                    <td><%= element.phnNumber %></td>
+                    <td><%= element.email %></td>
+                    <td class="text-end">
+                        <div class="btn-group" role="group" aria-label="Action Buttons">
+                            <a href="/view/<%= element._id %>" type="button" class="btn btn-primary m-1 btn-small"><i class="bi bi-eye"></i></a>
+    
+                            <a href="/edit/<%= element._id %>" type="button" class="btn btn-warning m-1 rounded btn-small"><i class="bi bi-pencil"></i></a>
+    
+                            <form action="/edit/<%= element._id %>?_method=DELETE" method="POST" class="position-relative">
+                                <button type="submit" class="btn btn-danger m-1 btn-small"><i class="bi-solid bi-trash"></i></button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+             
+            <% }) %>
+        </tbody>
+    </table>
+     
+    <% } else { %>
+        <h2>No Results Found</h2>
+    <% } %>
+</div>

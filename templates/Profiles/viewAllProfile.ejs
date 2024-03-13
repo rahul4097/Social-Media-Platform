@@ -1,0 +1,61 @@
+<!-- <div class="d-flex justify-content-between flex-md nowrap align-items-center pt-3 pb-2 mb-2 border-bottom">
+    <h1 class="h2"><%= users.fname %></h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <div class="btn-group me-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary ">Share</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary ">Export</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="col py-3">
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/profile">Dashboard</a></li>
+                    <li class="breadcrumb-item active"><%= users.fname %></li>
+                </ol>
+            </nav>
+        </div>
+
+        <div class="col text-end fw-lighter">
+            <b>Last Updated <%= new Date(users.updatedAt).toUTCString() %></b><br>
+            <b>UserId:</b> <%= users._id %>
+        </div>
+    </div>
+</div>
+
+
+<div class="table-responsive">
+    <table class="table table-striped table-sm">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">User Name</th>
+                <th scope="col" class="text-end">Action</th>
+            </tr>
+        </thead> 
+        <tbody>
+            <% allProfile.forEach(user => { %>
+                <tr class="align-middle">
+                    <td> <%=user.name %> </td>
+                    <td>  <%=user.userName %></td>
+                    <td class="text-end"> 
+                      <div class="btn-group" role="group" aria-label="Action Buttons">
+
+                          <form action="/profile/followProfile/<%= user._id %>?_method=PUT" method="POST" class="position-relative">
+                              <button type="submit" class="btn btn-danger m-1 btn-small"><i class="fa-solid fa-user-plus"></i></button>
+                          </form>
+                          <form action="/profile/unFollowProfile/<%= user._id %>?_method=PUT" method="POST" class="position-relative">
+                            <button type="submit" class="btn btn-danger m-1 btn-small"><i class="fa-solid fa-ban"></i></button>
+                        </form>
+                      </div>
+                    </td>
+                </tr>
+            <% }) %>
+           
+        </tbody>
+    </table>
+</div> -->
