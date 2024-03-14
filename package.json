@@ -2,7 +2,7 @@
   "name": "social-media-project",
   "version": "1.0.0",
   "description": "Creating a social media platform ",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {},
   "author": "Rahul",
   "license": "ISC",
